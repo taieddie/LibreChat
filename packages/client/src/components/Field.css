@@ -79,3 +79,16 @@ html[data-input-modality='pointer'] .lc-field.webkit-dark-styles:focus-visible {
     outline: none !important;
   }
 }
+
+/* The default type of a field. iOS zooms into a focused field under 16px and the installed PWA
+   never zooms back out, so touch devices floor it at 16px. A caller that sets its own text size
+   replaces this value, so larger sizes are kept. */
+.lc-field {
+  --lc-field-text: 0.875rem;
+}
+
+@media (any-pointer: coarse) {
+  .lc-field {
+    --lc-field-text: max(16px, 0.875rem);
+  }
+}

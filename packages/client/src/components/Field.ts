@@ -13,7 +13,7 @@ import { disabledFillClasses } from '~/utils/theme';
  * whose `fieldFillStyle` is `fill` paints the field in `field-fill`, which a disabled field keeps
  * under the pointer too; by default it stays clear.
  */
-export const fieldBase: string = `lc-field flex w-full rounded-lg border border-border-control px-3 py-theme-field-y text-sm text-field-text theme-field-fill:bg-field-fill theme-field-fill:disabled:hover:bg-field-fill placeholder:text-text-secondary focus-visible:outline-hidden focus-visible:ring-2 focus-visible:ring-focus-control theme-field-border:focus:border-border-field-focus theme-field-border:focus-visible:ring-1 theme-field-border:focus-visible:ring-border-field-focus disabled:cursor-not-allowed disabled:opacity-50 ${disabledFillClasses}`;
+export const fieldBase: string = `lc-field flex w-full rounded-lg border border-border-control px-3 py-theme-field-y text-[length:var(--lc-field-text)] text-field-text theme-field-fill:bg-field-fill theme-field-fill:disabled:hover:bg-field-fill placeholder:text-text-secondary focus-visible:outline-hidden focus-visible:ring-2 focus-visible:ring-focus-control theme-field-border:focus:border-border-field-focus theme-field-border:focus-visible:ring-1 theme-field-border:focus-visible:ring-border-field-focus disabled:cursor-not-allowed disabled:opacity-50 ${disabledFillClasses}`;
 
 /** A single-line control sized to sit in a form row, matching `Input`. */
 export const fieldControl: string = `${fieldBase} h-theme-field bg-transparent`;
